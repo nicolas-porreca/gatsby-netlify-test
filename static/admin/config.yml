@@ -23,7 +23,7 @@ collections:
     label: 'Localization test'
     folder: 'src/pages/localized'
     create: true
-    slug: {{slug}}
+    slug: '{{slug}}'
     extension: yaml
     format: yaml
     fields:
