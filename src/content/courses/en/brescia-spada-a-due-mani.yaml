@@ -1,0 +1,12 @@
+venue: Brescia
+discipline: Spada a due Mani
+instructor: Pippo Pluto
+hours:
+  - mon:
+      startTime: 03:13
+      endTime: 03:13
+      active: true
+  - mon:
+      startTime: 11:14
+      endTime: 11:14
+      active: true
