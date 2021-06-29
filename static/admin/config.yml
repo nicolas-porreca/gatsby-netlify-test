@@ -13,7 +13,7 @@ public_folder: /img
 locale: 'it'
 
 i18n:
-  structure: single_file
+  structure: multiple_folders
   locales: [ 'en', 'it' ]
   default_locale: 'en'
 
@@ -28,6 +28,7 @@ collections:
     format: yaml
     fields:
       - { label: 'Title', name: 'title', widget: 'string', i18n: true }
+      - { label: 'Not to translate', name: 'NoTranslate', widget: 'string' }
       - { label: 'Description', name: 'description', widget: 'text', i18n: true }
 
   - name: 'blog'
