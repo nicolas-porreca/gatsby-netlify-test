@@ -18,20 +18,6 @@ i18n:
   default_locale: 'en'
 
 collections:
-  - name: 'localized'
-    i18n: true
-    label: 'Localization test'
-    folder: 'src/content/localized'
-    create: true
-    slug: '{{slug}}'
-    extension: yaml
-    format: yaml
-    fields:
-      - { label: 'Title', name: 'title', widget: 'string', i18n: true }
-      - { label: 'Not to translate', name: 'NoTranslate', widget: 'string', i18n: duplicate }
-      - { label: 'Description', name: 'description', widget: 'text', i18n: true }
-      - { label: 'Time', name: 'time', widget: 'datetime', i18n: duplicate, date_format: false, time_format: "HH:mm", format: "hh:mm" }
-
   - name: 'blog'
     i18n: true
     label: 'Blog'
@@ -240,3 +226,62 @@ collections:
                 },
               ],
           }
+
+  - name: 'instructors'
+    label: 'Istruttori'
+    label_singular: 'Istruttore'
+    i18n: true
+    description: 'Istruttori dei corsi'
+    folder: 'src/content/instructors'
+    create: true
+    slug: '{{firstName}}-{{lastName}}'
+    extension: yaml
+    format: yaml
+    fields:
+      - { label: 'Nome', name: 'firstName', widget: 'string', i18n: duplicate, required: true }
+      - { label: 'Cognome', name: 'lastName', widget: 'string', i18n: duplicate, required: true }
+
+  - name: 'courses'
+    label: 'Corsi'
+    label_singular: 'Corso'
+    i18n: true
+    description: 'Corso curriculare'
+    folder: 'src/content/courses'
+    create: true
+    slug: '{{venue}}-{{discipline}}'
+    extension: yaml
+    format: yaml
+    fields:
+      - { label: 'Sala', name: 'venue', widget: 'string', i18n: duplicate, required: true }
+      - { label: 'Disciplina', name: 'discipline', widget: 'string', i18n: duplicate, required: true }
+      - {label: 'Istruttore', name: 'instructor', widget: 'relation', collection: 'instructors', value_field: '{{firstName}} {{lastName}}'}
+      - label: 'Orari'
+        name: 'hours'
+        widget: "list"
+        fields:
+          - label: 'Lun'
+            name: 'mon'
+            widget: 'object'
+            i18n: duplicate
+            fields:
+              - {label: 'Attivo', name: 'active', widget: 'boolean', i18n: duplicate}
+              - { label: 'Inizio', name: 'startTime', widget: 'datetime', i18n: duplicate, date_format: false, time_format: "hh:mm", format: "hh:mm" }
+              - { label: 'Fine', name: 'endTime', widget: 'datetime', i18n: duplicate, date_format: false, time_format: "HH:mm", format: "hh:mm" }
+
+  - name: 'config'
+    label: 'Config'
+    i18n:
+      structure: single_file
+    files:
+      - name: 'menu'
+        label: 'Menu'
+        file: 'src/config/menu.yaml'
+        i18n: true
+        fields:
+          - label: 'Voices'
+            name: 'voices'
+            widget: 'list'
+            fields:
+              - { label: 'label', name: 'Label', widget: 'string', i18n: true }
+              - { label: 'route', name: 'Route', widget: 'string', i18n: true }
+
