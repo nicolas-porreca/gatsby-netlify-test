@@ -254,17 +254,18 @@ collections:
     fields:
       - { label: 'Sala', name: 'venue', widget: 'string', i18n: duplicate, required: true }
       - { label: 'Disciplina', name: 'discipline', widget: 'string', i18n: duplicate, required: true }
-      - {label: 'Istruttore', name: 'instructor', widget: 'relation', collection: 'instructors', value_field: '{{firstName}} {{lastName}}'}
+      - { label: 'Istruttore', name: 'instructor', widget: 'relation', collection: 'instructors', value_field: '{{firstName}} {{lastName}}', search_fields: ['firstName', 'lastName'] }
       - label: 'Orari'
         name: 'hours'
-        widget: "list"
+        i18n: true
+        widget: 'list'
         fields:
           - label: 'Lun'
             name: 'mon'
             widget: 'object'
-            i18n: duplicate
+            i18n: true
             fields:
-              - {label: 'Attivo', name: 'active', widget: 'boolean', i18n: duplicate}
+              - { label: 'Attivo', name: 'active', widget: 'boolean', i18n: duplicate }
               - { label: 'Inizio', name: 'startTime', widget: 'datetime', i18n: duplicate, date_format: false, time_format: "hh:mm", format: "hh:mm" }
               - { label: 'Fine', name: 'endTime', widget: 'datetime', i18n: duplicate, date_format: false, time_format: "HH:mm", format: "hh:mm" }
 
