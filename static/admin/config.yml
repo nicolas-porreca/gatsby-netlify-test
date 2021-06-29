@@ -13,7 +13,7 @@ public_folder: /img
 locale: 'it'
 
 i18n:
-  structure: multiple_files
+  structure: multiple_folders
   locales: [ 'en', 'it' ]
   default_locale: 'en'
 
@@ -30,6 +30,7 @@ collections:
       - { label: 'Title', name: 'title', widget: 'string', i18n: true }
       - { label: 'Not to translate', name: 'NoTranslate', widget: 'string', i18n: duplicate }
       - { label: 'Description', name: 'description', widget: 'text', i18n: true }
+      - { label: 'Time', name: 'time', widget: 'datetime', i18n: duplicate, date_format: false, time_format: "HH:mm", format: "hh:mm" }
 
   - name: 'blog'
     i18n: true
