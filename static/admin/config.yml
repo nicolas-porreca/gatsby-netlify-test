@@ -13,7 +13,7 @@ public_folder: /img
 locale: 'it'
 
 i18n:
-  structure: multiple_folders
+  structure: multiple_files
   locales: [ 'en', 'it' ]
   default_locale: 'en'
 
@@ -21,14 +21,14 @@ collections:
   - name: 'localized'
     i18n: true
     label: 'Localization test'
-    folder: 'src/pages/localized'
+    folder: 'src/content/localized'
     create: true
     slug: '{{slug}}'
     extension: yaml
     format: yaml
     fields:
       - { label: 'Title', name: 'title', widget: 'string', i18n: true }
-      - { label: 'Not to translate', name: 'NoTranslate', widget: 'string' }
+      - { label: 'Not to translate', name: 'NoTranslate', widget: 'string', i18n: duplicate }
       - { label: 'Description', name: 'description', widget: 'text', i18n: true }
 
   - name: 'blog'
