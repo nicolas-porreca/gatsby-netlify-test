@@ -1,0 +1,14 @@
+{
+  "venue": "Sala",
+  "discipline": "Spada da Lato",
+  "instructor": "Pinco Pallino",
+  "hours": [
+    {
+      "mon": {
+        "startTime": "10:26",
+        "endTime": "02:26",
+        "active": true
+      }
+    }
+  ]
+}
