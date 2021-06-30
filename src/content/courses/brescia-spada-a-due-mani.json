@@ -1,0 +1,20 @@
+{
+  "en": {
+    "venue": "Brescia",
+    "discipline": "Spada a due mani",
+    "instructor": "Pinco Pallino",
+    "hours": [
+      {
+        "mon": {
+          "startTime": "02:36",
+          "endTime": "02:36",
+          "active": true
+        }
+      }
+    ]
+  },
+  "it": {
+    "venue": "Brescia",
+    "discipline": "Spada a due mani"
+  }
+}
