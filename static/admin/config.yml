@@ -235,8 +235,8 @@ collections:
     folder: 'src/content/instructors'
     create: true
     slug: '{{firstName}}-{{lastName}}'
-    extension: yaml
-    format: yaml
+    extension: json
+    format: json
     fields:
       - { label: 'Nome', name: 'firstName', widget: 'string', i18n: duplicate, required: true }
       - { label: 'Cognome', name: 'lastName', widget: 'string', i18n: duplicate, required: true }
@@ -249,8 +249,8 @@ collections:
     folder: 'src/content/courses'
     create: true
     slug: '{{venue}}-{{discipline}}'
-    extension: yaml
-    format: yaml
+    extension: json
+    format: json
     fields:
       - { label: 'Sala', name: 'venue', widget: 'string', i18n: duplicate, required: true }
       - { label: 'Disciplina', name: 'discipline', widget: 'string', i18n: duplicate, required: true }
