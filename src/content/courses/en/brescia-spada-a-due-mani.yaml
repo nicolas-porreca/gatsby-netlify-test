@@ -1,8 +1,0 @@
-venue: Brescia
-discipline: Spada a due mani
-instructor: Tizio Caio
-hours:
-  - mon:
-      startTime: 02:18
-      endTime: 06:18
-      active: true
