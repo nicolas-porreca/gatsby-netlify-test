@@ -285,4 +285,11 @@ collections:
             fields:
               - { label: 'label', name: 'Label', widget: 'string', i18n: true }
               - { label: 'route', name: 'Route', widget: 'string', i18n: true }
+      - label: "File Upload"
+        name: "file"
+        widget: "file"
+        default: "/uploads/general-manual.pdf"
+        media_library:
+          config:
+            multiple: true
 
