@@ -277,14 +277,7 @@ collections:
       - name: 'menu'
         label: 'Menu'
         file: 'src/config/menu.yaml'
-        i18n: true
         fields:
-          - label: 'Voices'
-            name: 'voices'
-            widget: 'list'
-            fields:
-              - { label: 'label', name: 'Label', widget: 'string', i18n: true }
-              - { label: 'route', name: 'Route', widget: 'string', i18n: true }
           - label: "File Upload"
             name: "file"
             widget: "file"
