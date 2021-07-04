@@ -1,0 +1,12 @@
+{
+  "it": {
+    "id": "hello-world",
+    "message": "Ciao Mondo!",
+    "image": "media/mm.jpg"
+  },
+  "en": {
+    "id": "hello-world",
+    "message": "Hello World!",
+    "image": "media/mm.jpg"
+  }
+}
